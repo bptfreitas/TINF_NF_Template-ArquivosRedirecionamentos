@@ -1,9 +1,6 @@
 #!/bin/bash
 
-
 test_file="./teste_qtd_linhas.txt"
-
-cd ..
 
 if [[ ! -f linhas.txt ]]; then
 

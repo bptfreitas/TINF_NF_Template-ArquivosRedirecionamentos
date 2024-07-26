@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ..
-
 expected=`grep -E -c 'a' ./mensagens.txt`
 
 real=`grep -E [0-9]+ ./letras.txt`

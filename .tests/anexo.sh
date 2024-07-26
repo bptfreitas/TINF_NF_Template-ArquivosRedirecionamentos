@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ..
 
 if  [[ `diff -q ./.teste.txt ./mensagens.txt` == "" ]]; then 
 

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ..
-
 ls -R /etc 1> teste_saida.txt 2> teste_erros.txt
 
 if [[ `diff -q saida.txt teste_saida.txt` != "" ]]; then
