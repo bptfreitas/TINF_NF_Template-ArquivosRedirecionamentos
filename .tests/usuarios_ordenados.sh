@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cut -f1 -d":" /etc/passwd > teste_usuarios.txt 
+cut -f1 -d":" /etc/passwd | sort > teste_usuarios_ordenados.txt 
 
-if [[  `diff -q teste_usuarios.txt usuarios.txt` == "" ]]; then
+if [[  `diff -q teste_usuarios_ordenados.txt usuarios_ordenados.txt` == "" ]]; then
 
 	exit 0
 

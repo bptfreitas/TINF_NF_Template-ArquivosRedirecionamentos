@@ -4,7 +4,7 @@ for index in $(seq 1 3); do
 
 	if [[ ! -f mensagem${index}.txt ]]; then 
 	
-		return 1
+		exit 1
 		
 	fi
 
@@ -12,4 +12,4 @@ done
 
 # arquivos existem
 
-return 0
+exit 0
