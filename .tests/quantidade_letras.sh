@@ -1,8 +1,12 @@
 #!/bin/bash
 
-expected=`grep -E -c 'a' ./mensagens.txt`
+expected=`grep -o 'a' ./mensagens.txt | wc -l | cut -f1 -d" "`
+
+echo "Expected: $expected"
 
 real=`grep -E [0-9]+ ./letras.txt`
+
+echo "Returned: $real"
 
 if [[ ${real} -eq ${expected} ]]; then 
 
