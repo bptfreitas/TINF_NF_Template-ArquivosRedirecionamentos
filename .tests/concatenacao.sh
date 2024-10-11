@@ -32,15 +32,14 @@ fi
 
 cat mensagem1.txt mensagem2.txt mensagem3.txt > ./teste_concatenacao.txt
 
-diff -q ./mensagens_antiga.txt ./teste_concatenacao.txt
 
-if [[ $? -eq 0 ]]; then 
+if [[ `diff -q ./mensagens_antiga.txt ./teste_concatenacao.txt` == "" ]]; then 
 
 	exit 0
 
 else
 
-	exit 4
+	exit 7
 
 fi
 
