@@ -1,15 +1,15 @@
 #!/bin/bash
 
-if [[ ! -f mensagem1.txt ]] || [[ `wc -c mensagem1.txt | cut -f1 -d" "` -lt 10 ]]; then
+if [[ ! -f mensagem1.txt ]] || [[ `wc -c mensagem1.txt | cut -f1 -d" "` -lt 1 ]]; then
 	exit 1
 fi
 
-if [[ ! -f mensagem2.txt ]] || [[ `wc -c mensagem2.txt | cut -f1 -d" "` -lt 10 ]]; then
-	exit 1
+if [[ ! -f mensagem2.txt ]] || [[ `wc -c mensagem2.txt | cut -f1 -d" "` -lt 1 ]]; then
+	exit 2
 fi
 
-if [[ ! -f mensagem3.txt ]] || [[ `wc -c mensagem3.txt | cut -f1 -d" "` -lt 10 ]]; then
-	exit 1
+if [[ ! -f mensagem3.txt ]] || [[ `wc -c mensagem3.txt | cut -f1 -d" "` -lt 1 ]]; then
+	exit 3
 fi
 
 cat mensagem1.txt mensagem2.txt mensagem3.txt > ./teste_concatenacao.txt
@@ -20,7 +20,7 @@ if [[ `diff -q ./mensagens_antiga.txt ./teste_concatenacao.txt` == "" ]]; then
 
 else
 
-	exit 1
+	exit 4
 
 fi
 
