@@ -5,17 +5,35 @@ CHECK_FILE="./mensagens.txt"
 
 if [[ ! -f "${TEST_FILE}" ]]; then
 
+	echo "ERRO: ${TEST_FILE} nao existe!"
+
 	exit 1;
+
+fi
+
+if [[ ! -s "${TEST_FILE}" ]]; then
+
+	echo "ERRO: ${TEST_FILE} vazio!"
+
+	exit 2;
 
 fi
 
 if [[ ! -f "${CHECK_FILE}" ]]; then
 
-	exit 1;
+	echo "ERRO: ${CHECK_FILE} nao existe!"
+
+	exit 3;
 
 fi
 
+if [[ ! -s "${CHECK_FILE}" ]]; then
 
+	echo "ERRO: ${CHECK_FILE} vazio!"
+
+	exit 4;
+
+fi
 
 nlines_test=`wc -l $TEST_FILE | cut -f1 -d " "`
 
