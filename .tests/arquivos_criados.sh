@@ -4,7 +4,9 @@ for index in $(seq 1 3); do
 
 	if [[ ! -f mensagem${index}.txt ]]; then 
 	
-		exit 1
+		echo "ERRO: mensagem${index}.txt nao criado!"
+	
+		exit ${i}
 		
 	fi
 
