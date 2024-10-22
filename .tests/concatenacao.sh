@@ -1,34 +1,19 @@
 #!/bin/bash
 
-if [[ ! -f mensagem1.txt ]]; then
-	echo "ERRO: mensagem1.txt nao existe!"
-	exit 1
-fi
 
-if [[ `wc -c mensagem1.txt | cut -f1 -d" "` -lt 5 ]]; then
-	echo "ERRO: mensagem1.txt eh um arquivo vazio!"
-	exit 2
-fi
+for i in $(seq 3); do
 
-if [[ ! -f mensagem2.txt ]]; then
-	echo "ERRO: mensagem2.txt nao existe!"
-	exit 3
-fi
+	if [[ ! -f mensagem${i}.txt ]]; then
+		echo "ERRO: mensagem${i}.txt nao existe!"
+		exit ${i}
+	fi
 
-if [[ `wc -c mensagem2.txt | cut -f1 -d" "` -lt 5 ]]; then
-	echo "ERRO: mensagem2.txt eh um arquivo vazio!"
-	exit 4
-fi
+	if [[ ! -s mensagem${i}.txt ]]; then
+		echo "ERRO: mensagem${i}.txt eh um arquivo vazio!"
+		exit $(( i*10 ))
+	fi
 
-if [[ ! -f mensagem3.txt ]]; then
-	echo "ERRO: mensagem3.txt nao existe!"
-	exit 5
-fi
-
-if [[ `wc -c mensagem3.txt | cut -f1 -d" "` -lt 5 ]]; then
-	echo "ERRO: mensagem3.txt eh um arquivo vazio!"
-	exit 6
-fi
+done
 
 cat mensagem1.txt mensagem2.txt mensagem3.txt > ./teste_concatenacao.txt
 
@@ -39,7 +24,9 @@ if [[ `diff -q ./mensagens_antiga.txt ./teste_concatenacao.txt` == "" ]]; then
 
 else
 
-	exit 7
+	echo "ERRO: arquivos de mensagens nao foram corretamente concatenados!"
+
+	exit 100
 
 fi
 
