@@ -4,7 +4,26 @@ test_file="./teste_qtd_linhas.txt"
 
 if [[ ! -f linhas.txt ]]; then
 
+	echo -e "\nERRO: arquivo linhas.txt nao existe!"
+
 	exit 1
+	
+fi
+
+if [[ ! -f mensagens.txt ]]; then
+
+	echo -e "\nERRO: arquivo mensagens.txt nao existe!"
+
+	exit 2
+	
+fi
+
+
+if [[ ! -s mensagens.txt ]]; then
+
+	echo -e "\nERRO: arquivo mensagens.txt vazio!"
+
+	exit 3
 	
 fi
 
@@ -20,6 +39,6 @@ if [[ $nr_obtido -eq $nr_esperado ]]; then
 
 else
 
-	exit 1
+	exit 4
 
 fi
