@@ -1,6 +1,6 @@
 #!/bin/bash
 
-container='introducao-terminal'
+container='arquivos-redirecionamentos'
 tag='dev'
 
 docker_dir="`which docker`"
