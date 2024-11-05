@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
-RUN apt update
-
-RUN apt install -y git sudo gcc make
+RUN apt update && apt install -y git sudo gcc make apt-utils
 
 WORKDIR /root
+
+ENV PATH="$PATH:/usr/games"
 
 COPY .tests/ .tests/
 
