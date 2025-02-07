@@ -1,7 +1,12 @@
 #!/bin/bash
 
 container='arquivos-redirecionamentos'
-tag='dev'
+
+if [[ "$STUDENT_TAG" != "" ]]; then 
+	tag="$STUDENT_TAG"
+else 
+	tag='dev'
+fi
 
 docker_dir="`which docker`"
 
