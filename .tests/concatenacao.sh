@@ -18,7 +18,7 @@ done
 cat mensagem1.txt mensagem2.txt mensagem3.txt > ./teste_concatenacao.txt
 
 
-if [[ `diff -q ./mensagens_antiga.txt ./teste_concatenacao.txt` == "" ]]; then 
+if [[ `diff -q ./mensagens.txt ./teste_concatenacao.txt` == "" ]]; then 
 
 	exit 0
 
