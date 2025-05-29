@@ -6,13 +6,11 @@
        
 2. Os exercícios estão, em sua maioria, dependentes um dos outros. Ou seja, o segundo depende do primeiro, o terceiro do segundo, e assim sucessivamente. Procure fazê-los na ordem.
        
-3. Os comandos executados para cada exercício deverão ser respondidos no arquivo de script  ./trabalho.sh 
+3. Os comandos executados para cada exercício deverão ser respondidos no respectivos arquivo de script  _./questaoX.sh_, onde o X é o número da questão
        
 4. O trabalho será corrigido automaticamente.
        
-Para saber sua nota, dentro do terminal, execute o script _./corrigir.sh_. 
-
-5. O trabalho é corrigido toda vez que o projeto é salvo no github pelo comando _git push origin main_ 
+Para saber sua nota, dentro do terminal, execute o script _./corrigir.sh_.
 
 ## Enunciado
 
@@ -22,7 +20,7 @@ Para saber sua nota, dentro do terminal, execute o script _./corrigir.sh_.
 
 3. Utilize o programa cat para concatenar todos os arquivos acima em uma única mensagem chamada _mensagens.txt_. 
        
-4. Copie o arquivo mensagens.txt para o arquivo mensagens_antiga.txt. Execute o comando fortune mais uma vez e anexe essa execução ao arquivo mensagens.txt.
+4. Copie o arquivo _mensagens.txt_ para o arquivo _mensagens_antiga.txt_. Execute o comando fortune mais uma vez e anexe essa execução ao arquivo mensagens.txt.
        
 5. Conte quantas linhas existem no arquivo mensagens.txt. 
        
@@ -42,7 +40,7 @@ Dica: você pode combinar o item 7 com pipes para fazer esta questão.
        
 7. Execute o comando ls -R na pasta /etc. Salve o resultado da execução no arquivo _saida.txt_ e os erros no arquivo _erros.txt_.
        
-8. Refaça o exercício anterior, mas agora salve todos os resultados no arquivo único saida_com_erros.txt.
+8. Refaça o exercício anterior, mas agora salve todos os resultados no arquivo único _saida\_com\_erros.txt_.
        
 9. O arquivo _/etc/passwd_ é um arquivo de configuração dentro de sistemas operacionais GNU/Linux que contém as informações de todos os usuários do sistema. Esse arquivo contém as informações de um usuário por linha, com informações separadas pelo caractere ‘:’ 
 
@@ -54,7 +52,7 @@ Atenção! Deverá constar apenas a primeira coluna do arquivo
        
 Dica: utiliza o comando cut ou o programa awk para fazer a extração
        
-10. Repita o exercício anterior, mas agora salve os usuários em ordem alfabética no arquivo usuarios_ordenados.txt 
+10. Repita o exercício anterior, mas agora salve os usuários em ordem alfabética no arquivo _usuarios\_ordenados.txt_ 
        
 Dica: utilize o comando sort junto com pipes no exercício anterior
 
