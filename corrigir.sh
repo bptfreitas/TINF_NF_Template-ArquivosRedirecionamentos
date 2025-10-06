@@ -1,7 +1,12 @@
 #!/bin/bash
 
 container='arquivos-redirecionamentos'
-tag='dev'
+
+if [[ $1 == "" ]]; then 
+    tag='dev'
+else
+    tag="$1"
+fi
 
 docker_dir="`which docker`"
 
@@ -11,8 +16,10 @@ if [[ "${docker_dir}" == "" ]]; then
 	exit 1
 fi
 
+echo "Building $container:$tag .."
+
 sudo docker rm "$container:$tag"
 
-sudo docker build -f .Dockerfile -t ${container}:${tag} . 
+sudo docker build --force-rm -f .Dockerfile -t ${container}:${tag} . 
 	
 sudo docker run --stop-timeout 60 ${container}:${tag}
