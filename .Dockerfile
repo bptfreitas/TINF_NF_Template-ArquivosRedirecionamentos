@@ -10,6 +10,8 @@ ENV PATH="$PATH:/usr/games"
 
 COPY .tests/ .tests/
 
+RUN chmod +x .tests/*
+
 # COPY .corretor corretor
 
 # RUN chmod +x ./corretor
@@ -19,6 +21,8 @@ COPY .grade_student.sh grade_student.sh
 RUN chmod +x  grade_student.sh
 
 COPY questao*.sh /root/
+
+RUN chmod +x questao*.sh
 
 # COPY trabalho.sh trabalho.sh
 
